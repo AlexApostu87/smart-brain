@@ -87,9 +87,9 @@ class App extends Component {
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input})
     if(this.state.input === initialState.input){
-      return 
+      return
     } else {
-        fetch('http://localhost:3001/imageurl', {
+        fetch('https://git.heroku.com/creepy-ghost-19568.git/imageurl', {
           method: 'post',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
@@ -99,7 +99,7 @@ class App extends Component {
         .then(response => response.json())
         .then(response => {
           if(response) {
-            fetch('http://localhost:3001/image', {
+            fetch('https://git.heroku.com/creepy-ghost-19568.git/image', {
               method: 'put',
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify({
