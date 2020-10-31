@@ -18,7 +18,7 @@ class Signin extends Component {
 	}
 
 	onSubmitSignIn = () => {
-		fetch('https://git.heroku.com/creepy-ghost-19568.git/signin', {
+		fetch('https://smart-brain987.herokuapp.com/signin', {
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({
